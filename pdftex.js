@@ -106,6 +106,7 @@ var TeXLive = function(opt_workerPath) {
       commands = [
         curry(self, 'FS_createDataFile', ['/', 'input.tex', source_code, true, true]),
         curry(self, 'FS_createLazyFilesFromList', ['/', 'texlive.lst', './texlive', true, true]),
+ 	curry(self, 'FS_createLazyFilesFromList', ['/', 'data.lst', './data', true, true]),
       ];
 
     var sendCompile = function() {

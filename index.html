@@ -1,112 +1,27 @@
 <html>
 
 <head>
-  <style>
-    h2 {
-      padding: 0px;
-      margin: 8px;
-    }
-    h3 {
-      padding: 0px;
-      margin: 0px;
-      font-size: 16px;
-      font-weight: bold;
-    }
-    footer {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      float: left;
-      width: 100%;
-      height: 18em;
-    }
-    .left {
-      float: left;
-      width: 50%;
-    }
-    .right {
-      float: left;
-      width: 50%;
-    }
-    body {
-      margin: 0 0 18em;
-    }
-    #editor {
-      position: absolute;
-      top: 7em;
-      bottom: 21em;
-      left: 0;
-      right: 0;
-    }
-    html {
-      position: relative;
-      min-height: 100%;
-    }
-  </style>
+<meta charset="utf-8" />
+
 </head>
 
 <body>
-  <h1>texlive.js - A LaTeX Environment in Javascript</h1>
-  <a href="https://github.com/fzimmermann89/texlive.js/"><img style="position: absolute; top: 0; right: 0; border: 0;z-index:100" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
-
-  <div id="buttons">
-    <button id="compile" autofocus>Compile to PDF</button>
-    <button id="open_pdf_btn" style="display: none">Open PDF</button>
+  <div style="height:100%;">
+    <div style="width:45%; height:100%; display: inline-block;">
+	<div class="both" id="buttons">
+      		<button id="compile" autofocus>Compile to PDF</button>
+   		<button id="open_pdf_btn" style="display: none">Open PDF</button>
+    	</div>
+<div id="editor" >
+	\input{ru.tex}</div>
+    </div>
+    <pre id="output" style="width:45%; height:100%; display: inline-block;" >Click "Compile to PDF" and watch the console output here.</pre>
   </div>
 
-  <div id="editor">
-\documentclass[12pt]{article}
-\usepackage{amsmath}
-\usepackage{graphicx}
-
-\title{\TeX live.js}
-\author{Created by Manuel Sch\"olling}
-\date{\today}
-\begin{document}
-  \maketitle
-  \TeX{}live.js is a compiler for the \TeX{}
-  typesetting program created using Mozilla's Emscripten
-  Compiler. It offers programmable desktop
-  publishing features and extensive facilities for
-  automating most aspects of typesetting and desktop
-  publishing, including numbering and cross-referencing,
-  tables and figures, page layout, bibliographies, and
-  much more. It supports \LaTeX{} which was originally written 
-  in 1984 by Leslie Lamport and has become the dominant method for
-  using \TeX;
- 
-  % This is a comment, not shown in final output.
-  % The following shows typesetting power of LaTeX:
-  \begin{align}
-    E_0 &= mc^2                              \\
-    E &= \frac{mc^2}{\sqrt{1-\frac{v^2}{c^2}}}
-  \end{align}
-
-\end{document} 
-  
-  
-  </div>
+        	<a name="running" id="running" style="display: none">Compiling...<img src="loading.gif" /></a>
 
   <footer>
-    <div class="both">
-      <h3>Console Output</h3>
-      <pre id="output" style="overflow: scroll; font-size:12px; max-height: 7em">Click "Compile to PDF" and watch the console output here.</pre>
-      <a name="running" id="running" style="display: none">Compiling...<img src="loading.gif" /></a>
-    </div>
 
-    <div class="left">
-      <h2>Licenses</h2>
-      <p>GPL/BSD (Ace)/TeXLive's license</p>
-    </div>
-    
-    <div class="right">
-      <h2>Related Projects</h2>
-      <ul>
-        <li><a href="https://github.com/manuels/texlive.js">manuels/texlive.js</a>: Pdftex compiled to Javascript</li>
-        <li><a href="https://github.com/kripken/emscripten">emscripten</a>: An LLVM-to-JavaScript Compiler used to create texlive.js</li>
-        <li><a href="https://ace.c9.io">Ace Editor</a>: Used for this page</li>
-      </ul>
-    </div>
 
   </footer>
 

@@ -5,3 +5,8 @@ install-tl-unx.tar.gz
 tmp
 build
 texlive-*
+texlive
+promisejs
+complete
+texlive.lst
+pdftex-worker.js

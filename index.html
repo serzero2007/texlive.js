@@ -67,12 +67,12 @@ div.right {
 </div>
 </div>
 
-<div class="right" style="overflow: hidden;z-index: 1; background-color:white;">
+<div class="right" style="overflow: hidden;z-index: 1;background-color:white;">
 	<div class="pdf-view" id="pdf"></div>
 </div>
 
 
-<div id="log-panel" class="right" style="overflow: auto;z-index:-1; background-color:white;">
+<div id="log-panel" class="right" style="overflow: auto;z-index:2; background-color:white;">
 <pre id="log">
 	Вас приветствует TikZ-2016.js.
 
@@ -121,6 +121,7 @@ div.right {
       	if (pdf_dataurl === false)  return;	
 	var temp = '<object id="pdf" style="width:100%; height:100%;" type="application/pdf" data="'+pdf_dataurl+'" /> \n'
 	document.getElementById("pdf").outerHTML = temp
+	setLogsVisibitity(-1)
     });
   }
   document.getElementById("compile").addEventListener("click", function(e) {

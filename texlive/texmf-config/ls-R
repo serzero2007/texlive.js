@@ -1,0 +1,9 @@
+% ls-R -- filename database for kpathsea; do not change this line.
+./:
+.:
+ls-R
+texmf-config
+
+
+./texmf-config:
+ls-R
